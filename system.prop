@@ -11,20 +11,20 @@ ro.sf.lcd_density=240
 
 # Default network type.
 # 3 -> GSM/WCDMA (auto mode, according to PRL)
-ro.telephony.default_network=3
+ro.telephony.default_network=4
 
 # The interfaces to get DNS data from when using mobile data
 # Comma-separated
-mobiledata.interfaces=rmnet0,rmnet1,rmnet2,rmnet3,rmnet4,gannet0
+mobiledata.interfaces=rmnet0,rmnet1,rmnet2,rmnet3
 
 wifi.interface = tiwlan0
 # Time between scans in seconds. Keep it high to minimize battery drain.
 # This only affects the case in which there are remembered access points,
 # but none are in range.
-wifi.supplicant_scan_interval = 95
+wifi.supplicant_scan_interval = 16
 
 # Use TI hotspot code
-wifi.hotspot.ti = 1
+wifi.hotspot.ti = 0
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -35,10 +35,10 @@ jpeg.libskiahw.decoder.enable=0
 jpeg.libskiahw.decoder.thresh=300000
 
 # Disable Jpeg HW encoder
-jpeg.libskiahw.encoder.enable=0
+jpeg.libskiahw.encoder.enable=1
 
 # This is a high density device with more memory, so larger vm heaps for it.
-dalvik.vm.heapsize=40m
+dalvik.vm.heapsize=8m
 
 # Forbid format of these partitions in mount menu :
 ro.cwm.forbid_format=/misc,/boot,/recovery,/pds,/system
@@ -50,19 +50,19 @@ ro.battery_light=true
 ro.usb.use_custom_service=1
 
 # disable Windows Media Sync Usb.apk mode
-ro.mtp_available=0
+ro.mtp_available=1
 
 # use 1% battery steps
-ro.product.use_charge_counter=1
+ro.product.use_charge_counter=0
 
 # use default multitouch configuration
 persist.sys.multitouch=2
 
 # required for future java part (common omap3/4)
-# com.ti.omap_enhancement=1
+com.ti.omap_enhancement=0
 
 # Shutter sound enabled
-persist.sys.camera-mute=1
+persist.sys.camera-mute=0
 
 # Enable mute switch handling
 ro.config.ringerswitch = 1
